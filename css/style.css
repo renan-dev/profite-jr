@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif; }
+
+#header2 {
+  display: none; }
+
+.info {
+  display: none; }
+
+header {
+  width: 100%;
+  height: 60vh; }
+
+#header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+  #header .logotipo {
+    margin-left: 140px; }
+  #header .txtBusca {
+    font-size: 13px;
+    border: none;
+    width: 400px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7a7a7a;
+    background: url(../img-icons/Icon-1.png) no-repeat right center; }
+
+.grupo-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 120px; }
+  .grupo-menu .usu-area {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; }
+    .grupo-menu .usu-area a {
+      text-decoration: none;
+      color: #7a7a7a; }
+    .grupo-menu .usu-area .carrinho-usuario {
+      margin-left: 15px; }
+  .grupo-menu .tradutor {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-top: 5px;
+    margin-left: -35px; }
+    .grupo-menu .tradutor::before {
+      content: "";
+      border-left: 2px solid gray;
+      height: 15px;
+      margin: 0 10px 0 10px; }
+    .grupo-menu .tradutor img {
+      width: 20px;
+      height: 20px;
+      padding-left: 10px; }
+    .grupo-menu .tradutor ul {
+      display: flex;
+      align-items: center; }
+    .grupo-menu .tradutor li {
+      cursor: pointer; }
+
+#carousel {
+  width: 100%;
+  height: 350px;
+  margin: auto;
+  overflow: hidden; }
+
+#itens {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  display: inline-block; }
+  #itens ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex; }
+  #itens img {
+    width: 100vw;
+    height: 350px; }
+  #itens .item h2 {
+    position: absolute;
+    width: 380px;
+    padding-left: 210px;
+    padding-top: 80px;
+    color: #fff;
+    font-size: 2.8em; }
+    #itens .item h2::after {
+      content: "";
+      display: block;
+      border-bottom: 5px solid #FF9F1C;
+      width: 60px;
+      height: 10px; }
+
+.setas {
+  position: relative;
+  top: 180px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer; }
+  .setas #anterior {
+    position: relative;
+    z-index: 10;
+    right: 150px; }
+  .setas #proximo {
+    position: relative;
+    left: 150px;
+    z-index: 10; }
+
+.produtos,
+h3 {
+  margin-left: 216px; }
+
+.produtos::after {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #FF9F1C;
+  width: 60px;
+  height: 10px; }
+
+.container {
+  width: 940px;
+  height: 407px;
+  margin-left: 170px;
+  display: flex;
+  align-items: center; }
+  .container .previous,
+  .container .next {
+    cursor: pointer; }
+
+.item-produto {
+  width: 216px;
+  height: 370px;
+  margin: 30px 13px; }
+  .item-produto h6 {
+    text-align: center;
+    color: #7a7a7a; }
+    .item-produto h6::after {
+      content: "";
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: -15px;
+      width: 70px;
+      height: 10px;
+      background-image: url("../img-icons/stars.png");
+      background-repeat: no-repeat;
+      cursor: pointer; }
+  .item-produto h5 {
+    text-align: center;
+    color: #2EC4B6;
+    font-size: 20px;
+    margin-top: -10px; }
+  .item-produto p {
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 12px;
+    margin-top: 5px; }
+  .item-produto .triangulo-promocao {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1em solid;
+    font-size: 30px;
+    border-color: #FF9F1C transparent transparent transparent;
+    transform: rotate(-135deg);
+    margin: -49px 167px; }
+    .item-produto .triangulo-promocao p {
+      color: #fff;
+      margin: -25px -39px;
+      transform: rotate(-225deg); }
+  .item-produto:hover {
+    background: #F2F2F2; }
+  .item-produto .invisivel {
+    display: none; }
+  .item-produto:hover .invisivel {
+    display: flex; }
+
+.produto {
+  margin: 20px 17px; }
+  .produto img {
+    margin-top: 20px; }
+  .produto .parcelas {
+    margin-top: -30px; }
+  .produto button {
+    width: 135px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: url(../img-icons/carrinho-comprar.png) no-repeat left;
+    background-position: 20px;
+    background-color: #2EC4B6;
+    color: #F2F2F2;
+    border: none; }
+  .produto .btn-padrao {
+    box-align: center;
+    margin-left: 23px;
+    text-indent: 20px;
+    cursor: pointer; }
+
+footer {
+  padding: 15px;
+  height: 213px;
+  background-color: #011627;
+  border-bottom: 10px solid #2EC4B6; }
+  footer .rodape {
+    width: 940px;
+    height: 210px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+  footer h3 {
+    margin-left: 12px;
+    margin-top: -115px;
+    color: #F2F2F2; }
+    footer h3::after {
+      content: "";
+      display: block;
+      border-bottom: 5px solid #FF9F1C;
+      width: 60px;
+      height: 10px; }
+  footer h4 {
+    margin-top: 30px;
+    margin-bottom: 0; }
+  footer .filiais {
+    width: 512px;
+    color: #F2F2F2;
+    margin-left: -98px;
+    margin-top: 80px;
+    line-height: 25px;
+    display: flex;
+    align-items: center; }
+    footer .filiais .filial-sp,
+    footer .filiais .filial-rj {
+      margin-right: 40px; }
+
+.contate-nos {
+  width: 195px;
+  height: 105px;
+  margin-left: -60px;
+  display: grid;
+  align-items: center;
+  padding-top: 70px; }
+  .contate-nos button {
+    width: 195px;
+    height: 38px;
+    color: #F2F2F2;
+    border-radius: 5px;
+    border: none;
+    padding-left: 45px;
+    display: flex;
+    align-items: center; }
+
+.botao-contato {
+  background: url(../img-icons/cartinha.png) no-repeat left;
+  background-color: #FF9F1C;
+  background-position: 15px;
+  cursor: pointer; }
+
+.botao-consultor {
+  background: url(../img-icons/contato.png) no-repeat left;
+  background-color: #FF9F1C;
+  background-position: 15px;
+  margin-top: 45px;
+  cursor: pointer; }
+
+.autores,
+.createdby {
+  width: 185px;
+  color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: auto;
+  font-size: 10px; }
+
+.autores .profite {
+  margin-right: 20px; }
+  .autores .profite p {
+    margin-bottom: 5px; }
+
+.vtex p {
+  margin-bottom: 5px; }
+
+li {
+  list-style: none;
+  font-size: .8em; }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; }
+
+  #header {
+    display: none; }
+
+  #header2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px; }
+
+  .menu2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%; }
+
+  .menu-hamburger {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer; }
+    .menu-hamburger span::after {
+      content: "";
+      border-bottom: 2px solid black;
+      display: block;
+      width: 20px;
+      margin-bottom: 4px; }
+
+  .logotipo {
+    margin: auto 70px; }
+
+  .txtBusca {
+    font-size: 13px;
+    border: none;
+    width: 400px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7a7a7a;
+    background: url(../img-icons/Icon-1.png) no-repeat right center; }
+
+  #carousel {
+    background-image: url("../img-icons/MaskGroup1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px; }
+    #carousel #itens {
+      display: none; }
+
+  .info {
+    display: block;
+    width: 180px;
+    color: #fff;
+    font-size: 2em;
+    margin-left: 30px;
+    margin-top: 60px; }
+    .info::after {
+      content: "";
+      display: block;
+      border-bottom: 5px solid #FF9F1C;
+      width: 60px;
+      height: 10px; }
+
+  .container {
+    margin-left: 0px; }
+
+  .secao-produtos {
+    padding-top: 70px;
+    width: 100vw; }
+    .secao-produtos h3 {
+      margin-left: 30px; }
+
+  .no-mobile {
+    display: none; }
+
+  .previous,
+  .next {
+    display: none; }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 400px; }
+    footer .rodape {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+
+  .location {
+    margin-left: -370px;
+    margin-top: -100px; }
+
+  .filiais {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+
+  .localizacao {
+    margin-left: -800px;
+    margin-top: 200px; }
+
+  .contate-nos {
+    margin-left: -500px;
+    margin-top: 20px;
+    padding: 0; }
+    .contate-nos button {
+      margin: 0; }
+
+  .autores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; }
+
+  .createdby {
+    margin-left: -500px; } }
+
+/*# sourceMappingURL=style.css.map */
